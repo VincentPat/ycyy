@@ -1,0 +1,26 @@
+// 使用REM，375像素宽的设备下，1rem等于100px
+html {
+    font-size: calc(100vw / 3.75);
+}
+
+img {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+#_embed_v3_dc,
+.pingfuADHolder,
+.lxb-container {
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    width: 0!important;
+    height: 0!important;
+    top: -10000px!important;
+    left: -10000px!important;
+}

@@ -1,0 +1,25 @@
+@import './color.scss';
+
+// 内边距
+$padding: 1.5vh;
+// 外边距
+$margin: 2.5vh;
+// 顶部按钮大小
+$size_top_btn: 4vh;
+// 圆角
+$radius: .1rem;
+// 阴影
+$shadow: 0px 2px 4px 0px $c-shadow-y;
+
+// 首页模块高度
+$h_title: 8vh;
+$h_banner: 15vh;
+$h_self: 12vh;
+$h_games: 28vh;
+$h_modules: 12vh;
+$h_share: 10vh;
+
+// 规则页
+$h_rule_title: .6rem;
+
+$h_rank_item: .64rem;
