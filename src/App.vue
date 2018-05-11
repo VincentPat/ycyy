@@ -147,6 +147,10 @@ export default {
                     this.$bus.config.giftmoneyCost = result.redpack_cost;
                     this.$bus.config.goldNum = result.collect_gold_num;
                     this.$bus.config.goldGap = result.collect_gold_gap;
+                    this.$bus.config.env = result.env;
+                    if (this.$bus.config.env === 'test') {
+                        this.$bus.config.giftmoneyStatus = 'wait';
+                    }
                     // this.$bus.config.giftmoneyNextTime = result.redpact_next_time;
                 }
                 console.log('获取活动配置', result);
@@ -308,7 +312,7 @@ export default {
                     }
                 }
                 // 红包赛状态
-                if (result.status) this.$bus.config.giftmoneyStatus = result.status;
+                if (result.status && this.$bus.config.env !== 'test') this.$bus.config.giftmoneyStatus = result.status;
 
                 // 写死一个时间
                 // this.$bus.config.giftmoneyNextTime = null;

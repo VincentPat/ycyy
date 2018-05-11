@@ -43,6 +43,7 @@ export default {
                     giftmoneyCode: '3436hjhf767asff'
                 },
                 config: {
+                    env: 'product',
                     rankCost: 0,
                     giftmoneyCost: 0,
                     lifeCost: 0,
