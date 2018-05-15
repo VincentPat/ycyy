@@ -150,6 +150,7 @@ export default {
                     this.$bus.config.env = result.env;
                     if (this.$bus.config.env === 'test') {
                         this.$bus.config.giftmoneyStatus = 'wait';
+                        this.$bus.config.giftmoneyNextTime = null;
                     }
                     // this.$bus.config.giftmoneyNextTime = result.redpact_next_time;
                 }
@@ -312,7 +313,12 @@ export default {
                     }
                 }
                 // 红包赛状态
-                if (result.status && this.$bus.config.env !== 'test') this.$bus.config.giftmoneyStatus = result.status;
+                if (this.$bus.config.env === 'test') {
+                    this.$bus.config.giftmoneyStatus = 'wait';
+                    this.$bus.config.giftmoneyNextTime = null;
+                } else {
+                    this.$bus.config.giftmoneyStatus = result.status;
+                }
 
                 // 写死一个时间
                 // this.$bus.config.giftmoneyNextTime = null;
